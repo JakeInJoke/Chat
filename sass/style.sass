@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@500&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap')
+
+*
+    margin: 0
+    padding: 0
+
+html,body 
+    width: 100%
+    height: 100%
+
+$colorOscuro:#39394e
+$colorMenu:#444457
+$textoBlanco:#f8f8f8
+$navTextHover:#5dd9ff
+$fuenteNavFooter:'Overpass', sans-serif
+$fuentePrueba:'Varela Round', sans-serif
+
+body
+    position: relative
+    background: #1c1b29
+
+#barritanavegadora
+    width: 100%
+    height: 70px
+    background: $colorOscuro 
+    color: $textoBlanco
+    font-family: $fuentePrueba
+    font-size: 20px
+    position: relative
+    display: flex
+    align-items: center
+
+    i
+        margin-left: 20px
+        font-size: 40px
+        float: left
+
+    ul li
+        list-style: none
+        display: inline
+        margin-left: 30px
+
+        a
+            text-decoration: none
+            color: $textoBlanco
+            font-weight: 300
+
+            &:hover
+                color: $navTextHover
+            
+#izquierda
+    float: left
+    height: 100%
+    display: flex
+    align-items: center
+
+#derecha
+    position: absolute
+    height: 100%
+    right: 0
+    display: flex
+    float: right
+    //margin: 30px
+    align-items: center
+    li
+        margin: 0 !important
+    li i
+        font-size: 20px
+        cursor: pointer
+        &:not(.fu):hover
+            color: #26d369
+            transition: all 0.5s
+
+#userCard
+    width: fit-content
+    display: flex !important
+    align-items: center
+
+    #i-user
+        margin-left: 25px
+        margin-right: 10px
+        height: 40px
+        width: 40px
+        background: #2de2d9
+        border-radius: 100%
+        cursor: pointer
+
+    #i-user:hover
+        background: #8df3ee
+
+    #n-user
+        display: flex
+        font-size: 15px
+        align-items: center
+        padding-left: 5px
+        height: 40px
+        width: 120px
+        background: transparent
+
+        i
+            margin-left: 10px
+            font-size: 15px
+
+            &:hover
+                transform: rotate(180deg)
+
+#pies
+    width: 100%
+    height: 70px
+    background: $colorOscuro
+    position: absolute
+    bottom: 0
+    //display=organizacion interna de un componente
+    display: flex
+    align-items: center
+
+    p
+        color: $textoBlanco
+        font-family: $fuenteNavFooter
+        margin-left: 30px
+
+#busqueda
+    width: 260px
+    height: 50px
+    background: $colorOscuro
+    display: flex
+    margin-left: 50px
+    margin-top: 50px
+    margin-bottom: 50px
+    border-radius: 10px
+    justify-content: center
+    align-items: center
+
+    input
+        font-family: $fuentePrueba
+        height: 30px
+        background: transparent
+        border: none
+        width: 170px
+        color: $textoBlanco
+        outline: none
+        margin-left: 30px
+        margin-right: 10px
+        font-size: 15px
+    button
+        height: 80%
+        width: 50px
+        font-size: 20px
+        color: #afafaf
+        background: transparent
+        border: none
+        outline: none
+        cursor: pointer
+
+        i:hover
+            color: #ececec
+            transition: all 0.5s
+
+#menu
+    width: 260px
+    height: fit-content
+    background: $colorMenu
+    color: $textoBlanco
+    margin-left: 50px
+    margin-right: 50px
+    border-radius: 10px
+    font-family: $fuentePrueba
+    border: none
+
+    p
+        background: #3d3d50
+        border-top-left-radius: 10px
+        border-top-right-radius: 10px
+    p , ul li
+        height: 50px
+        display: flex
+        align-items: center
+        padding-left: 20px
+    
+    ul li
+        cursor: pointer
+        font-weight: 100
+
+        &:hover
+            background: #2e2e41
+            border-left: 3px solid $navTextHover
+            color: $navTextHover
+            
+        &:last-child
+            border-bottom-left-radius: 10px
+            border-bottom-right-radius: 10px
+
+#container
+    height: calc( 100% - 140px )
+    width: 100%
+    position: relative
+    display: flex
+
+    #sidebar
+        height: 100%
+        width: 360px
+        overflow: hidden
+
+    #app
+        width: calc(100% - 360px)
+        height: 100%
+        overflow: auto
+    
+    #sof-name
+        width: 100%
+        height: 170px
+        background: transparent
+        color: $textoBlanco
+        font-family: $fuentePrueba
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 45px
+        padding-right: 30px
+        padding-left: 30px
+        box-sizing: border-box
+        p
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 100%
+            height: 100%
+            border-bottom: 1px solid #fff6fa
+
+    #fly-container
+        width: 100%
+        display: grid
+        height: calc( 100% - 170px )
+    
+    .fly-row
+        width: 100%
+        display: flex
+        &:first-child
+            padding-top: 30px
+
+    .flayers
+        width: calc( 50% - 90px )
+        height: calc( 100% - 30px)
+        background: $colorMenu
+        border-radius: 10px
+        margin-left: 30px
+        font-family: $fuentePrueba
+        border: none
+        display: flex
+        padding: 0 20px 0 20px
+        p
+            display: flex
+            color: $textoBlanco
+            align-items: center
+            justify-content: center
+            width: 100%
+            height: 50px
+                //background: #c4c6c8
+            border-bottom: 1px solid #fff6fa
+            
+                
+                
+                
+
+                
+
+
+        
+
+::-webkit-input-placeholder  
+    color: #afafaf
+
+:-moz-placeholder 
+    color: #afafaf
+
+::-moz-placeholder 
+    color: #afafaf
+
+:-ms-input-placeholder 
+    color: #afafaf
